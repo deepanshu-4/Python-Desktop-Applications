@@ -35,8 +35,8 @@ while img_counter!=1:
     print("{} written!".format(img_name))
     img_counter += 1
 
-    fromaddr = "kaushikdeepanshu14@gmail.com"
-    toaddr = "kaushikdeepanshu14@gmail.com"
+    fromaddr = "your email address "
+    toaddr = "your email address"
 
     # instance of MIMEMultipart 
     msg = MIMEMultipart() 
@@ -58,7 +58,7 @@ while img_counter!=1:
 
     # open the file to be sent 
     filename = img_name
-    attachment = open(r"C:\Users\chetna kaushik\Desktop\opencv_frame_0.png", "rb") 
+    attachment = open(r"filelocation\opencv_frame_0.png", "rb") 
 
     # instance of MIMEBase and named as p 
     p = MIMEBase('application', 'octet-stream') 
@@ -81,7 +81,7 @@ while img_counter!=1:
     s.starttls() 
 
     # Authentication 
-    s.login(fromaddr, "anjubala") 
+    s.login(fromaddr, "password") 
 
     # Converts the Multipart msg into a string 
     text = msg.as_string() 
